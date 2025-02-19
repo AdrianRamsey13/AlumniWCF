@@ -23,6 +23,6 @@ namespace AlumniWCF.Services
         Task AddImage(IEnumerable<AlumniImageDTO> alumniImages);
 
         [OperationContract]
-        Task DeleteIamgeByIDAsync(int imageID, int alumniID);
+        Task DeleteImageByIDAsync(int imageID, int alumniID);
     }
 }

@@ -49,6 +49,19 @@ namespace AlumniWCF.Services
                 throw new ArgumentException("No image to add");
             }
 
+            foreach (var image in alumniImages)
+            {
+                if (string.IsNullOrWhiteSpace(image.ImagePath) || string.IsNullOrWhiteSpace(image.FileName))
+                {
+                    throw new ArgumentException("ImagePath or FileName cannot be null or empty.");
+                }
+
+                if (image.AlumniID <= 0)
+                {
+                    throw new ArgumentException("Invalid AlumniID.");
+                }
+            }
+
             try
             {
                 var newImages = alumniImages.Select(a => new AlumniImage
@@ -68,7 +81,7 @@ namespace AlumniWCF.Services
 
         }
 
-        public async Task DeleteIamgeByIDAsync(int imageID, int alumniID)
+        public async Task DeleteImageByIDAsync(int imageID, int alumniID)
         {
             try
             {

@@ -33,6 +33,7 @@ namespace AlumniWCF.DTO
             CreateMap<Major, MajorDTO>().ReverseMap();
             CreateMap<JobHistory, JobHistoryDTO>().ReverseMap();
             CreateMap<State, StateDTO>().ReverseMap();
+            CreateMap<AlumniImage, AlumniImageDTO>().ReverseMap();
         }
     }
 }
