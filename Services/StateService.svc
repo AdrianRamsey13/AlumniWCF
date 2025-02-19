@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="AlumniWCF.Services.StateService" CodeBehind="StateService.svc.cs" %>
